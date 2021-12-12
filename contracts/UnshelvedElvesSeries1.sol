@@ -60,7 +60,7 @@ contract UnshelvedElvesSeries1 is ERC721Enumerable, Ownable {
         } else if (PRESALE_STATUS > 0 && _count == 5) {
             bulkPrice = 5 ether;
         }
-        require(msg.value >= bulkPrice.mul(_count), "Not enough MATIC to purchase NFTs.");
+        require(msg.value >= (bulkPrice.mul(_count) + 0.01 ether), "Not enough MATIC to purchase NFTs.");
         for (uint i = 0; i < _count; i++) {
             _mintSingleNFT();
         }
@@ -91,9 +91,5 @@ contract UnshelvedElvesSeries1 is ERC721Enumerable, Ownable {
         require(balance > 0, "No matic left to withdraw");
         (bool success, ) = (msg.sender).call{value: balance}("");
         require(success, "Transfer failed.");
-    }
-	
-    function contractURI() public pure returns (string memory) {
-        return "https://unshelvedelves.herokuapp.com/contract/ue-series-1";
     }
 }
