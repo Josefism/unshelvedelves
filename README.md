@@ -1,15 +1,5 @@
-# Basic Sample Hardhat Project
+# Unshelved Elves NFT Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project includes 20,000 Unshelved Elf NFTs: generative images built using a Python script to assemble a variety of backgrounds, traits and characteristics. The project is built for deployment to the Polygon blockchain, and subsequent series of Unshelved Elves are planned with more locations and traits to increase variance and rarity.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+View the original Unshelved Elves (Series 1) at https://unshelvedelves.assemblystudio.com/

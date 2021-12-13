@@ -1,7 +1,7 @@
 const { utils } = require("ethers");
 
 async function main() {
-    const baseTokenURI = "ipfs://QmYoWWKy7hw9TXYkb5jWtdMpKdQiV6grGjw6CFEQVwZKTR/";
+    const baseTokenURI = "ipfs://QmWP83KsvEX8SYDDBCGNfQEjq1PKW9W5ZjqMyhfiKxeEFV/";
 
     // Get owner/deployer's wallet address
     const [owner] = await hre.ethers.getSigners();
@@ -17,19 +17,6 @@ async function main() {
 
     // Get contract address
     console.log("Contract deployed to:", contract.address);
-
-    // Reserve NFTs
-    //let txn = await contract.reserveNFTs(10);
-    //await txn.wait();
-    //console.log("10 NFTs have been reserved");
-
-    // Mint 3 NFTs by sending 0.03 ether
-    //txn = await contract.mintNFTs(3, { value: utils.parseEther('0.03') });
-    //await txn.wait()
-
-    // Get all token IDs of the owner
-    //let tokens = await contract.tokensOfOwner(owner.address)
-    //console.log("Owner has tokens: ", tokens);
 
 }
 
