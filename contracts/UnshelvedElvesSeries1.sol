@@ -60,7 +60,7 @@ contract UnshelvedElvesSeries1 is ERC721Enumerable, Ownable {
         } else if (PRESALE_STATUS > 0 && _count == 5) {
             bulkPrice = 5 ether;
         }
-        require(msg.value >= (bulkPrice.mul(_count) + 0.01 ether), "Not enough MATIC to purchase NFTs.");
+        require(msg.value >= bulkPrice.mul(_count), "Not enough MATIC to purchase NFTs.");
         for (uint i = 0; i < _count; i++) {
             _mintSingleNFT();
         }
