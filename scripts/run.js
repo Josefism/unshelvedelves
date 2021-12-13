@@ -17,7 +17,6 @@ async function main() {
 
     // Get contract address
     console.log("Contract deployed to:", contract.address);
-
 }
 
 main()
