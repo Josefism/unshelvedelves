@@ -3,7 +3,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan")
 require('dotenv').config();
 
-const { API_URL, PRIVATE_KEY, POLYGONSCAN_API } = process.env;
+const { API_URL, PRIVATE_KEY, PROD_PRIVATE_KEY, POLYGONSCAN_API } = process.env;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -29,6 +29,10 @@ module.exports = {
     mumbai: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [process.env.PRIVATE_KEY]
+    },
+    matic: {
+      url: ALCHEMY_URL,
+      accounts: PROD_PRIVATE_KEY,
     }
   },
   etherscan: {
